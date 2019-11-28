@@ -1,4 +1,4 @@
-const demoArray = () => {
+const demoArraySpread = () => {
     const myArrayOne = [
         {
             name: "Alice",
@@ -25,7 +25,7 @@ const demoArray = () => {
     console.log(JSON.stringify(mySquashedArray))
 }
 
-const demoObject = () => {
+const demoObjectSpread = () => {
     const myObjectOne =
     {
         Id: 1,
@@ -49,7 +49,7 @@ const demoObject = () => {
 }
 
 
-const demoObjectWhoopsie = () => {
+const demoObjectSpreadWhoopsie = () => {
     const myObjectOne =
     {
         Id: 1,
@@ -74,13 +74,13 @@ const demoObjectWhoopsie = () => {
 
 
 
-const demoRealLife = () => {
+const demoRealLifeSpread = () => {
     const myInitialObject = {
         name:"Bob", 
         jobTitle: "Software Engineer", 
         salary: 30000
     }
-    
+
     console.log(JSON.stringify(myInitialObject))
 
     const objectAfterPromotion = {
