@@ -15,61 +15,70 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <script src="examples/arrowFunctions.js"></script>
+    <script src="examples/arrowFunctions.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-   
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Arrow Functions</h1>
-                <p>Arrow functions allow you to create functions with a more functional and concise syntax</p>
-                <p>It allows you to show that a function does one thing and promotes smaller functions.</p>
-                <h5>You use the => syntax for arrow functions</h5>
-                <h5>You can try the following commands:</h5>
 
-                <div class="card mb-2">
-                    <pre><code>
-                        const theOldWay = (a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) => {
-                            console.log("a: ", a)
-                            console.log("b: ", b)
-                            console.log("c: ", c)
-                            //... And so on
-                        
-                            console.log("z: ", z)
-                        }
-                        
-                        theOldWay("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Arrow Functions</h1>
+            <p>Arrow functions allow you to create functions with a more functional and concise syntax</p>
+            <p>It allows you to show that a function does one thing and promotes smaller functions.</p>
+            <h4>Beware of lexical `this` when using arrow functions <a href="https://hackernoon.com/javascript-es6-arrow-functions-and-lexical-this-f2a3e2a5e8c4" target="_blank">See here for more details</a></h4>
+            <h5>You use the => syntax for arrow functions</h5>
+            <h5>You can try the following commands:</h5>
 
-                    </code></pre>
-
-                </div>
-
-                    <div class="card mb-2">
-                        <pre><code>
-                        const theRestParameterWay = (a, ...restOfAlphabet) => {
-                            console.log("theRestParameterWay")
-                            console.log("a:", a)
-                            restOfAlphabet.forEach(letter => {
-                                console.log(`${letter}: ${letter}`)
-                            })
-                        }
-                            
-                        //theRestParameterWay("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
-                            
-                        </code></pre>
-    
-
-                    
-             
-
+            <div class="card mb-2">
+                <pre><code>
+                function theFunctionWay(myParameter) {
+                    console.log(myParameter)
+                }
                 
-                        </div>
+                theFunctionWay("Hello, World")
+                </code></pre>
+
             </div>
+
+            <div class="card mb-2">
+                <pre><code>
+                function theFunctionWayMultipleParams(myParameter, myParameter2) {
+                    console.log(myParameter)
+                    console.log(myParameter2)
+                }
+                
+                theFunctionWay("Hello", " World")
+                
+                </code></pre>
+            </div>
+            <div class="card mb-2">
+                <pre><code>
+                const theArrowFunctionWay = myParameter =>  console.log(myParameter)
+
+                theArrowFunctionWay("Hello, World")
+                </code></pre>
+            </div>
+
+
+            <div class="card mb-2">
+                <pre><code>
+                const theArrowFunctionWayMultipleParams = (myParameter, myParameter2) => {
+                    console.log(myParameter)
+                    console.log(myParameter2)
+                }
+                     
+                theArrowFunctionWayMultipleParams("Hello", " World")
+                </code></pre>
+            </div>
+
+
+
+            
         </div>
+    </div>
 
 </body>
 
