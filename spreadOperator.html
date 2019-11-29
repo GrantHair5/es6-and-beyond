@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+   
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Spread Operator</h1>
+                <p>The spread operator basically lets you smoosh two objects or arrays together</p>
+                <h5>It is used with the ... syntax</h5>
+                <h5>You can try the following commands:</h5>
+
+                <div class="card mb-2">
+                    <pre><code>
+                        const demoArraySpread = () => {
+                            const myArrayOne = [
+                                {
+                                    name: "Alice",
+                                    age: 28
+                                },
+                                {
+                                    name: "Bob",
+                                    age: 23
+                                }
+                            ]
+                        
+                            const myArrayTwo = [
+                                {
+                                    name: "Charles",
+                                    age: 47
+                                },
+                                {
+                                    name: "David",
+                                    age: 64
+                                }
+                            ]
+                        
+                            const mySquashedArray = [...myArrayOne, ...myArrayTwo]
+                            console.log(JSON.stringify(mySquashedArray))
+                        }
+
+                    </code></pre>
+                </div>
+
+                <div class="card mb-2">
+                    <pre><code>
+                        const demoObjectSpread = () => {
+                        const myObjectOne =
+                        {
+                            Id: 1,
+                            Price: 100
+                    
+                        }
+                    
+                        const myObjectTwo =
+                        {
+                            Id: 2,
+                            Price: 5000000
+                        }
+                        const myObjectThree =
+                        {
+                            Description: "This is an expensive item"
+                        }
+                    
+                    
+                        const mySquashedObject = { ...myObjectOne, ...myObjectTwo, ...myObjectThree }
+                        console.log(JSON.stringify(mySquashedObject))
+                    }
+                </code></pre>
+                </div>
+
+
+                <div class="card mb-2">
+                        <pre><code>
+                                const demoObjectSpreadWhoopsie = () => {
+                                    const myObjectOne =
+                                    {
+                                        Id: 1,
+                                        Price: 1
+                                
+                                    }
+                                
+                                    const myObjectTwo =
+                                    {
+                                        Id: 2,
+                                        Price: 5000000
+                                    }
+                                    const myObjectThree =
+                                    {
+                                        Description: "This is an expensive item"
+                                    }
+                                
+                                
+                                    const mySquashedObject = {  ...myObjectTwo, ...myObjectOne,...myObjectThree }
+                                    console.log(JSON.stringify(mySquashedObject))
+                                }
+    
+                        </code></pre>
+                    </div>
+
+
+                    <div class="card mb-2">
+                            <pre><code>
+                                    const demoRealLifeSpread = () => {
+                                        const myInitialObject = {
+                                            name:"Bob", 
+                                            jobTitle: "Software Engineer", 
+                                            salary: 30000
+                                        }
+                                    
+                                        console.log(JSON.stringify(myInitialObject))
+                                    
+                                        const objectAfterPromotion = {
+                                            name:"Bob", 
+                                            jobTitle: "JavaScript Ninja", 
+                                            salary: 1000000
+                                        }
+                                    
+                                        const theNewAndImprovedBob = {...myInitialObject, ...objectAfterPromotion}
+                                        console.log(JSON.stringify(theNewAndImprovedBob))
+                                    }
+        
+                            </code></pre>
+                        </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
