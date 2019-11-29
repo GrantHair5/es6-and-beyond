@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="examples/letAndConst.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Let and Const</h1>
+            <p>Let and const have been introduced to allow you to scope your variables which is unavailable when using
+                var as it is global</p>
+            <p>Const is for constants</p>
+            <p>Let for variables that will change</p>
+            <h5>You can try the following commands:</h5>
+
+            <div class="card mb-2">
+                <pre><code>
+                var myGlobalVariable = "Hello World"
+
+                const whyUseLetAndConst = () => {
+                console.log(myGlobalVariable)
+                }
+
+                // Hello World
+                </code></pre>
+            </div>
+
+            <div class="card mb-2">
+                <pre><code>
+                var myGlobalVariable = "Hello World"
+
+                const whyUseLetAndConst2 = () => {
+                var myGlobalVariable = "Something Else"
+                console.log(myGlobalVariable)
+                }
+
+                // Something Else
+                </code></pre>
+            </div>
+
+            <div class="card mb-2">
+                <pre><code>
+                const whyUseLetAndConst3 = () => {
+                    console.log(myGlobalVariable)
+                    var myGlobalVariable = "Something Else"
+                }
+                
+                // Undefined
+                    </code></pre>
+            </div>
+
+
+            <div class="card mb-2">
+                <pre><code>
+                const whyUseLetAndConst4 = () => {
+                    console.log(myGlobalVariable)
+                    const myGlobalVariable = "Something Else Constant"
+                }
+                
+                /* letAndConst.js:23 Uncaught ReferenceError: Cannot access 'myGlobalVariable' before initialization
+                    at whyUseLetAndConst4 (letAndConst.js:23)
+                    at <anonymous>:1:1
+                */
+                        </code></pre>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
